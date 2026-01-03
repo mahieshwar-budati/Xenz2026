@@ -1,0 +1,2 @@
+cd xenz\xenz-enroll\backend
+node server.js
