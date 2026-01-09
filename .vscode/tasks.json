@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Auto Start Backend",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "isBackground": true,
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Auto Open Frontend",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "start",
+        "http://127.0.0.1:5500/frontend/index.html"
+      ],
+      "dependsOn": "Auto Start Backend",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
